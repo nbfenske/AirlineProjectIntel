@@ -1,0 +1,38 @@
+﻿<Window x:Class="AirlineProjectIntel.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AirlineProjectIntel"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="9*" />
+        </Grid.RowDefinitions>
+        <Rectangle Name="menuBar" Grid.ColumnSpan="2" Grid.Row="0"></Rectangle>
+        <Rectangle Name="mainScreen" Grid.ColumnSpan="2" Grid.Row="1"></Rectangle>
+        <Button Content="Quit" Click="Quit_Click" Grid.Column="1" HorizontalAlignment="Left" Margin="434,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Image Margin="322,24,19,201" Grid.Column="1" Grid.Row="1" Source="/images/airplane (2).png"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="24,24,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontFamily="Franklin Gothic Book"><Run Text="Intel Airlines"/><LineBreak/><Run Text="Flight Reservation"/></TextBlock>
+        <Line
+    X1="10" Y1="10"
+    X2="10" Y2="350"
+    Stroke="Black"
+    StrokeThickness="2" Grid.ColumnSpan="2" Margin="254,0,446,0" Grid.Row="1" />
+        <TextBlock HorizontalAlignment="Left" Margin="25,95,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" FontFamily="Franklin Gothic Book" Text="Login"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="25,153,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding UsernameText}" VerticalAlignment="Top" Width="215"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="25,203,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding PasswordText}" VerticalAlignment="Top" Width="215"/>
+        <Button Content="Login" Click="Login_Click" HorizontalAlignment="Left" Margin="95,257,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,175,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" FontFamily="Franklin Gothic Book"><Run Text="Username"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="25,226,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" FontFamily="Franklin Gothic Book" Text="Password"/>
+        <TextBlock x:Name="Error_Label" Text="{Binding ErrorLabelText}" HorizontalAlignment="Left" TextWrapping="Wrap"  Margin="25,292,0,0" VerticalAlignment="Top" Width="215" Height="56" Grid.Row="1" FontSize="10"/>
+        <Button Content="Register" Click="Register_Click" Grid.Column="1" HorizontalAlignment="Left" Margin="334,10,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>
